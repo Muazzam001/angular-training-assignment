@@ -1,0 +1,69 @@
+<!-- App Start -->
+<div class="relative pt-10 minfo__app max-xl:pt-20">
+  <div
+    class="menu-overlay fixed top-0 left-0 w-full h-full bg-black/60 transition-all duration-200 z-999 opacity-0 invisible [&.is-menu-open]:visible [&.is-menu-open]:opacity-100">
+  </div>
+  <div class="max-lg:px-4">
+    <!-- Mobile Menu Bar Start -->
+    <app-mobile-menu></app-mobile-menu>
+    <!-- Mobile Menu Bar End -->
+
+    <!-- Mobile Menu Sidebar Start -->
+    <app-mobile-sidebar></app-mobile-sidebar>
+    <!-- Mobile Menu Sidebar End -->
+
+    <!-- Sidebar Profile Start -->
+    <app-left-sidebar></app-left-sidebar>
+    <!-- Sidebar Profile End -->
+
+    <!-- Nav/Navigation Start -->
+    <app-navbar></app-navbar>
+    <!-- Nav/Navigation End -->
+
+    <!-- Main Content Start -->
+    <div
+      class="minfo__contentBox relative mx-auto max-w-container xl:max-2xl:max-w-65rem *:py-5 xl:*:py-3.5 *:max-w-content max-xl:*:mx-auto xl:*:ml-auto xl:max-2xl:*:max-w-50rem">
+      <!-- Hero/Introduction Section Start -->
+      <app-intro data-scroll-index="0" id="home" class="block"></app-intro>
+      <!-- Hero/Introduction Section End -->
+
+      <!-- About Me Section Start -->
+      <app-about data-scroll-index="1" id="about" class="block"></app-about>
+      <!-- About Me Section End -->
+
+      <!-- My Services Section Start -->
+      <app-services data-scroll-index="2" id="service" class="block"></app-services>
+      <!-- My Services Section End -->
+
+      <!-- Skills Section Start -->
+      <app-skills data-scroll-index="3" id="skill" class="block"></app-skills>
+      <!-- Skills Section End -->
+
+      <!-- My Resume Section Start -->
+      <app-resume data-scroll-index="4" id="resume" class="block"></app-resume>
+      <!-- My Resume Section End -->
+
+      <!-- Portfolio Section Start -->
+      <app-portfolios data-scroll-index="5" id="portfolio" class="block"></app-portfolios>
+      <!-- Portfolio Section End -->
+
+      <!-- Blog Section Start -->
+      <app-blogs data-scroll-index="6" id="blog" class="block"></app-blogs>
+      <!-- Blog Section End -->
+
+      <!-- Testimonial Section Start -->
+      <app-testimonials data-scroll-index="7" id="testimonial" class="block"></app-testimonials>
+      <!-- Testimonial Section End -->
+
+      <!-- Contact Section Start -->
+      <app-contact data-scroll-index="8" id="contact" class="block"></app-contact>
+      <!-- Contact Section End -->
+    </div>
+    <!-- Main Content End -->
+
+    <!-- Footer Start -->
+    <app-footer></app-footer>
+    <!-- Footer End -->
+  </div>
+</div>
+<!-- App End -->

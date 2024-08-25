@@ -1,0 +1,76 @@
+/*  Simple PX to REM units converter   */
+@function pxToRem($size) {
+  @return math.div($size, 16px) * 1rem;
+}
+
+/* // @param {Boolean} $self - Condition to be true */
+@mixin pseudoEvent($self: false) {
+  @if $self {
+
+    &,
+    &:hover,
+    &:active,
+    &:focus-within,
+    &:focus-visible,
+    &:focus {
+      @content;
+    }
+  }
+
+  @else {
+
+    &:hover,
+    &:active,
+    &:focus-within,
+    &:focus-visible,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin scrollbar($size: 8, $thumb-color: #eee, $track-color: #333, $thumb-radius: 0, $track-radius: 0, $thumb-color-hover: #333, $track-color-hover: #eee) {
+
+  /*    For Google Chrome    */
+
+  /*   !* scrollbar width *!  */
+  ::-webkit-scrollbar {
+    width: $size;
+  }
+
+  /*    !* scrollbar thumb / Handle *!    */
+  ::-webkit-scrollbar-thumb {
+    border-radius: #{$thumb-radius};
+    background-color: $thumb-color;
+
+    &:hover {
+      background-color: $thumb-color-hover;
+    }
+  }
+
+  /*   !* scrollbar track *!    */
+  ::-webkit-scrollbar-track {
+    border-radius: #{$track-radius};
+    background-color: $track-color;
+
+    &:hover {
+      background-color: $track-color-hover;
+    }
+  }
+
+  /*
+   Standard version (Firefox only for now)
+   scrollbar-color: $thumb-color $track-color;
+  */
+}
+
+@mixin gradient-directional($start-color: $gray-700, $end-color: $gray-800, $start-percent: null, $end-percent: null, $deg: 45deg) {
+  background-color: $start-color;
+
+  background-image: linear-gradient($deg, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-directional($start-color: $gray-700, $end-color: $gray-800, $deg: 45deg) {
+  background-color: $start-color;
+  background-image: linear-gradient($deg, $start-color, $end-color);
+}

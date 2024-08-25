@@ -25,6 +25,9 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": []
+            },
             "assets": [
               {
                 "glob": "**/*",
@@ -32,17 +35,36 @@
               }
             ],
             "styles": [
+              "./node_modules/tailwindcss/base.css",
+              "./node_modules/tailwindcss/components.css",
+              "./node_modules/tailwindcss/utilities.css",
+              "./node_modules/aos/dist/aos.css",
+              "./node_modules/swiper/swiper-bundle.min.css",
+              "./public/assets/fonts/fa6/css/all.min.css",
+              "./public/assets/styles/cdheadline.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./public/assets/scripts/isotope.pkgd.js",
+              "./public/assets/scripts/waypoints.min.js",
+              "./public/assets/scripts/tw-elements.umd.min.js",
+              "./public/assets/scripts/cd-headline.js",
+              "./public/assets/scripts/jquery.counterup.min.js",
+              "./node_modules/swiper/swiper-bundle.min.js",
+              "./public/assets/scripts/scrollIt.min.js",
+              "./node_modules/jquery-circle-progress/dist/circle-progress.min.js",
+              "./public/assets/scripts/custom.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1000kB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
