@@ -16,15 +16,16 @@
 
   <!-- skills-slider-->
   <swiper-container init="false" #skillsSwiperContainer class="mt-12" navigation="true">
-    <swiper-slide class="slider-wrap" style="--bs-bg-opacity: 0.5" *ngFor="let itemSlide of slides">
+    <swiper-slide class="slider-wrap group" style="--bs-bg-opacity: 0.5" *ngFor="let itemSlide of slides">
       <div class="mx-auto icon w-13 h-13">
-        <img [src]="itemSlide.image" class="dark:grayscale" [alt]="itemSlide.title" />
+        <img [src]="itemSlide.image" class="dark:grayscale group-hover:dark:grayscale-0" [alt]="itemSlide.title" />
       </div>
       <!-- [attr.data-to]="itemSlide.percent" -->
       <div role="progressbar" aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="itemSlide.percent"
         style="--value: {{itemSlide.percent}}"></div>
 
-      <!-- <div class="progress mx-auto my-3 relative flex justify-center items-center">
+      <!-- 
+      <div class="progress mx-auto my-3 relative flex justify-center items-center">
         <svg class="relative -rotate-90 w-[150px] h-[150px]">
           <circle cx="75" cy="75" r="70" class="w-full h-full fill-none stroke-[5] stroke-[#f0f0f0]"></circle>
           <circle cx="75" cy="75" r="70" class="w-full h-full fill-none stroke-[5] stroke-[#2ecc71]"
@@ -34,9 +35,10 @@
         <div class="number absolute top-1/2 left-1/2">
           <h3 class="text-5xl font-light">{{itemSlide.percent}}<span class="text-3xl">%</span></h3>
         </div>
-      </div> -->
+      </div> 
+      -->
 
-      <div class="text-black dark:text-white name text-center">{{itemSlide.title}}</div>
+      <div class="text-black group-hover:dark:text-theme name text-center">{{itemSlide.title}}</div>
     </swiper-slide>
   </swiper-container>
 

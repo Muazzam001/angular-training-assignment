@@ -5,6 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:dev": "ng build -c development",
+    "build:preview": "ng build -c preview",
+    "build:staging": "ng build -c staging",
+    "build:uat": "ng build -c uat",
+    "build:prod": "ng build -c production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

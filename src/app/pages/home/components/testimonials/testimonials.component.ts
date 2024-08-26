@@ -69,7 +69,7 @@ export class TestimonialsComponent {
         init: function (index: any) {
           $('.testimonial-slider-navigation .counter').html(
             '<span class="text-theme">' +
-            (slidesArr[index]) +
+            (1) +
             '</span>' +
             '/' +
             slidesArr.length
@@ -78,7 +78,7 @@ export class TestimonialsComponent {
         slideChange: function (index: any) {
           $('.testimonial-slider-navigation .counter').html(
             '<span class="text-theme">' +
-            (slidesArr[index]) +
+            (1) +
             '</span>' +
             '/' +
             slidesArr.length
